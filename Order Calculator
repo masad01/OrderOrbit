@@ -1,0 +1,86 @@
+<script>
+    // This is an array of dish names.
+
+    var dishes = [
+        "Kafta Kabob",
+        "Chicken Kafta",
+        "Combo Kabob",
+        "Baked Tilapia",
+        "Seafood Plate",
+        "Grilled Salmon",
+        "Beef Shawarma",
+        "Chicken Shawarma",
+        "Falafel Plate (Chickpeas)",
+        "Chicken Kabob",
+        "Lamb Kabob",
+        "Cajun Chicken",
+        "Mediterranean Chicken",
+        "Avocado Chicken",
+        "Chicken Caesar",
+        "Teriyaki Chicken",
+        "Buffalo Chicken",
+        "Chicken Shawarma",
+        "Beef Shawarma",
+        "Baba Ganoush Wrap",
+        "Grape Leaves Wrap",
+        "Falafel Wrap (Cheak Peas)",
+        "French Fries",
+        "Baba Ganoush",
+        "Falafel (3 pieces with hummus)",
+        "Grape Leaves (8 pieces)",
+        "Side Salad",
+        "Side Rice"
+    ];
+  
+// This function generates a random order for a given number of people.
+    function generateOrder(numPeople) {
+        var order = {}; // Initialize an empty object to store the order.
+        // Loop through the number of people.
+
+        for(var i = 0; i < numPeople; i++) {
+
+            // Randomly select a dish from the dishes array.
+            var dish = dishes[Math.floor(Math.random()*dishes.length)];
+         
+// Check if the dish is already in the order.
+if (order[dish]) {
+                order[dish]++; // If yes, increase its quantity by 1.
+            } else {
+                order[dish] = 1; // If no, add it to the order with a quantity of 1.
+            }
+        }
+        return order; // Return the generated order.
+    }
+    
+// This function displays the generated order in a specific format.
+    function displayOrder(order) {
+        var text = "We recommend you order:\n"; // Initial message.
+
+        // Loop through the dishes in the order.
+        for(var dish in order) {
+// Append each dish and its quantity to the message.
+            text += order[dish] + " x " + dish + "\n";
+        }
+        // Display the formatted message in an HTML element with ID 'resultDisplay'.
+        document.getElementById('resultDisplay').innerText = text;
+    }
+    // This code adds an event listener to the button with ID 'submitButton'.
+    document.getElementById('submitButton').addEventListener('click', function() {
+        // When the button is clicked, get the number of people from the input with ID 'peopleInput'.
+        var numPeople = document.getElementById('peopleInput').value;
+        // Generate a random order for the given number of people.
+        var order = generateOrder(numPeople);
+        // Display the generated order.
+        displayOrder(order);
+    });
+</script>
+
+// This is for the fields 
+// Inout field
+<input type="number" id="peopleInput" placeholder="Number of people">
+// Button for user to click
+<button id="submitButton">Generate Order</button>
+
+// Element to display generated order
+<p id="resultDisplay"></p>
+
