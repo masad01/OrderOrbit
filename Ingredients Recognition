@@ -1,6 +1,6 @@
 // Function to retrieve ingredients and their shelf life based on the dish name.
 function getIngredientsAndShelfLife(dishName) {
-
+ 
     // Defining a dictionary of recipes, each with ingredients and their respective shelf life (in days).
   var recipes = {
         // Example: "Kafta Kabob" and its ingredients with their shelf life.
