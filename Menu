@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+// Coloring and Formatting for containers, text, columns, etc 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            margin: 20px;
+            min-width: 300px;
+        }
+
+        h1, h2 {
+            background-color: #1A5D1A;
+            color: #ffffff;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .plate {
+            background-color: #C3EDC0;
+            border: 1px solid #1A5D1A;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .plate h3, .plate p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .plate .price {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MENU</h1>
+
+    <div class="container">
+
+        <div class="column">
+            <h2>DINNER PLATES</h2>
+            <p>Served with rice pilaf and greek salad</p>
+            
+            <!-- Lamb Kabob -->
+            <div class="plate">
+                <h3>Lamb Kabob</h3>
+                <span class="price">$12.95</span>
+            </div>
+
+            <!-- Kafta Kabob -->
+            <div class="plate">
+                <h3>Kafta Kabob</h3>
+                <p>Ground marinated beef and lamb</p>
+                <span class="price">$11.95</span>
+            </div>
+
+            <!-- Chicken Kafta -->
+            <div class="plate">
+                <h3>Chicken Kafta</h3>
+                <p>Ground marinated chicken</p>
+                <span class="price">$11.95</span>
+            </div>
+
+            <!-- Chicken Kabob -->
+            <div class="plate">
+                <h3>Chicken Kabob</h3>
+                <span class="price">$11.95</span>
+            </div>
+
+            <!-- Combo Kabob -->
+            <div class="plate">
+                <h3>Combo Kabob</h3>
+                <p>Choose 2: Lamb, chicken, beef or kafta</p>
+                <span class="price">$14.95</span>
+            </div>
+
+            <!-- Baked Tilapia -->
+            <div class="plate">
+                <h3>Baked Tilapia</h3>
+                <span class="price">$11.95</span>
+            </div>
+
+            <!-- Seafood Plate -->
+            <div class="plate">
+                <h3>Seafood Plate</h3>
+                <p>Hadock or Tilapia + Shrimp, Scallops and Calamari</p>
+                <span class="price">$14.95</span>
+            </div>
+
+            <!-- Grilled Salmon -->
+            <div class="plate">
+                <h3>Grilled Salmon</h3>
+                <span class="price">$13.95</span>
+            </div>
+
+            <!-- Beef Shawarma -->
+            <div class="plate">
+                <h3>Beef Shawarma</h3>
+                <span class="price">$12.95</span>
+            </div>
+
+            <!-- Chicken Shawarma -->
+            <div class="plate">
+                <h3>Chicken Shawarma</h3>
+                <span class="price">$12.95</span>
+            </div>
+
+            <!-- Falafel Plate -->
+            <div class="plate">
+                <h3>Falafel Plate (Chickpeas)</h3>
+                <p>Lettuce, tabouleh, pickles, hummus and tahini sauce</p>
+                <span class="price">$11.95</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>HOT WRAPS</h2>
+            <p>Served with rice pilaf and greek salad</p>
+            
+            <!-- Chicken Kabob Wrap -->
+            <div class="plate">
+                <h3>Chicken Kabob Wrap</h3>
+                <p>Grilled chicken with lettuce, feta, onions, scallions, red & green peppers, tomato and ranch</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Lamb Kabob Wrap -->
+            <div class="plate">
+                <h3>Lamb Kabob Wrap</h3>
+                <p>Grilled lamb with lettuce, feta, onions, scallions, red & green peppers, tomato and ranch</p>
+                <span class="price">$8.95</span>
+            </div>
+
+            <!-- Cajun Chicken Wrap -->
+            <div class="plate">
+                <h3>Cajun Chicken Wrap</h3>
+                <p>Grilled Cajun chicken, roasted zucchini Romaine lettuce and tomato</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Falafel Wrap -->
+            <div class="plate">
+                <h3>Falafel Wrap (Ground Chick Peas)</h3>
+                <p>Hummus, Tabouleh, Tahini Sauce, Lettuce Peppers and Onions</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Kafta Kabob Wrap -->
+            <div class="plate">
+                <h3>Kafta Kabob Wrap</h3>
+                <p>Grilled ground beef with hummus, lettuce, tomatoes, onions, parsley and Tahini sauce</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Lamb Shawarma Wrap -->
+            <div class="plate">
+                <h3>Lamb Shawarma Wrap</h3>
+                <p>Lamb, garlic, pickles, tomatoes and lettuce</p>
+                <span class="price">$8.95</span>
+            </div>
+
+            <!-- Chicken Shawarma Wrap -->
+            <div class="plate">
+                <h3>Chicken Shawarma Wrap</h3>
+                <p>Chicken, garlic, pickles, tomatoes and lettuce</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Steak and Cheese Wrap -->
+            <div class="plate">
+                <h3>Steak and Cheese Wrap</h3>
+                <p>Steak, American cheese, mushrooms, onions and peppers</p>
+                <span class="price">$7.95</span>
+            </div>
+
+            <!-- Caesar Wrap -->
+            <div class="plate">
+                <h3>Caesar Wrap</h3>
+                <p>Grilled chicken, romaine lettuce, caesar dressing and parmesan cheese</p>
+                <span class="price">$7.95</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>SIDE ORDERS</h2>
+            
+            <!-- French Fries -->
+            <div class="plate">
+                <h3>French Fries</h3>
+                <span class="price">$3.50</span>
+            </div>
+
+            <!-- Baba Ganoush -->
+            <div class="plate">
+                <h3>Baba Ganoush</h3>
+                <span class="price">$5.95</span>
+            </div>
+
+            <!-- Hummus -->
+            <div class="plate">
+                <h3>Hummus</h3>
+                <span class="price">$5.95</span>
+            </div>
+
+            <!-- Garlic Sauce -->
+            <div class="plate">
+                <h3>Garlic Sauce</h3>
+                <span class="price">$0.50</span>
+            </div>
+
+            <!-- Pita Bread -->
+            <div class="plate">
+                <h3>Pita Bread</h3>
+                <span class="price">$0.50</span>
+            </div>
+
+            <!-- Rice Pilaf -->
+            <div class="plate">
+                <h3>Rice Pilaf</h3>
+                <span class="price">$3.95</span>
+            </div>
+
+            <!-- Greek Salad -->
+            <div class="plate">
+                <h3>Greek Salad</h3>
+                <span class="price">$6.95</span>
+            </div>
+
+            <!-- Tzatziki Sauce -->
+            <div class="plate">
+                <h3>Tzatziki Sauce</h3>
+                <span class="price">$0.50</span>
+            </div>
+
+            <!-- Tabouleh Salad -->
+            <div class="plate">
+                <h3>Tabouleh Salad</h3>
+                <span class="price">$5.95</span>
+            </div>
+
+            <!-- Falafel (6 Pieces) -->
+            <div class="plate">
+                <h3>Falafel (6 Pieces)</h3>
+                <span class="price">$5.95</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
