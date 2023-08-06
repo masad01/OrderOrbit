@@ -1,0 +1,227 @@
+// Function to retrieve ingredients and their shelf life based on the dish name.
+function getIngredientsAndShelfLife(dishName) {
+
+    // Defining a dictionary of recipes, each with ingredients and their respective shelf life (in days).
+  var recipes = {
+        // Example: "Kafta Kabob" and its ingredients with their shelf life.
+
+        "Kafta Kabob": {
+            "Ground Beef": 2,
+            "Lamb": 2,
+            "Parsley": 5,
+            "Onions": 14,
+            "Garlic": 30,
+            "Spices": 60
+        },
+        "Chicken Kafta": {
+            "Ground Chicken": 2,
+            "Parsley": 5,
+            "Onions": 14,
+            "Garlic": 30,
+            "Spices": 60
+        },
+        "Combo Kabob": {
+            "Choice of Meat": 2,
+            "Onions": 14,
+            "Peppers": 7,
+            "Tomatoes": 5,
+            "Rice": 5
+        },
+        "Baked Tilapia": {
+            "Tilapia": 3,
+            "Lemon": 21,
+            "Olive Oil": 365,
+            "Garlic": 30,
+            "Spices": 60
+        },
+        "Seafood Plate": {
+            "Hadock": 2,
+            "Tilapia": 3,
+            "Shrimp": 2,
+            "Scallops": 2,
+            "Calamari": 2
+        },
+        "Lamb Plate": {
+            "Hummus": 7,
+            "Rice": 5,
+            "Lamb": 2,
+            "Lettuce": 5
+        },
+        "Grilled Salmon": {
+            "Salmon": 2,
+            "Lemon": 21,
+            "Olive Oil": 365,
+            "Garlic": 30,
+            "Spices": 60
+        },
+        "Beef Shawarma": {
+            "Beef": 2,
+            "Onions": 14,
+            "Garlic": 30,
+            "Spices": 60,
+            "Flatbread": 7
+        },
+        "Chicken Shawarma": {
+            "Chicken": 2,
+            "Onions": 14,
+            "Garlic": 30,
+            "Spices": 60,
+            "Flatbread": 7
+        },
+        "Falafel Plate (Chickpeas)": {
+            "Chickpeas": 60,
+            "Lettuce": 5,
+            "Tabouleh": 3,
+            "Pickles": 21,
+            "Hummus": 5,
+            "Tahini Sauce": 30
+        },
+        "Chicken Kabob": {
+            "Chicken": 2,
+            "Lettuce": 5,
+            "Feta": 7,
+            "Onions": 14,
+            "Scallions": 5,
+            "Red & Green Peppers": 7,
+            "Tomato": 5,
+            "Ranch": 60
+        },
+        "Lamb Kabob": {
+            "Lamb": 2,
+            "Lettuce": 5,
+            "Feta": 7,
+            "Onions": 14,
+            "Scallions": 5,
+            "Red & Green Peppers": 7,
+            "Tomato": 5,
+            "Ranch": 60
+        },
+        "Cajun Chicken": {
+            "Chicken": 2,
+            "Cajun Spice": 60,
+            "Roasted Zucchini": 7,
+            "Romaine Lettuce": 5,
+            "Tomato": 5
+        },
+        "Mediterranean Chicken": {
+            "Chicken": 2,
+            "Hummus": 7,
+            "Roasted Red Peppers": 7,
+            "Romaine Lettuce": 5,
+            "Tomato": 5
+        },
+        "Avocado Chicken": {
+            "Chicken": 2,
+            "Avocado": 5,
+            "Lettuce": 5,
+            "Tomatoes": 5,
+            "Cheddar Cheese": 7,
+            "Ranch Dressing": 60
+        },
+        "Chicken Ceasar": {
+            "Chicken": 2,
+            "Romaine Lettuce": 5,
+            "Caesar Dressing": 30,
+            "Croutons": 60,
+            "Parmesan Cheese": 10
+        },
+        "Teriyaki Chicken": {
+            "Chicken": 2,
+            "Teriyaki Glaze": 60,
+            "Almonds": 180,
+            "Romaine Lettuce": 5,
+            "Tomato": 5
+        },
+        "Buffalo Chicken": {
+            "Chicken": 2,
+            "Blue Cheese": 10,
+            "Romaine Lettuce": 5,
+            "Tomato": 5,
+            "Buffalo Sauce": 60
+        },
+        "Baba Ganoush Wrap": {
+            "Baba Ganoush": 7,
+            "Lettuce": 5,
+            "Tomatoes": 5,
+            "Tahini Sauce": 30,
+            "Mixed Vegetables": 7
+        },
+        "Grape Leaves Wrap": {
+            "Grape Leaves": 7,
+            "Lettuce": 5,
+            "Tomatoes": 5
+        },
+        "Falafel Wrap (Cheak Peas)": {
+            "Falafel": 7,
+            "Lettuce": 5,
+            "Tabouleh": 3,
+            "Pickles": 21,
+            "Hummus": 5,
+            "Tahini Sauce": 30
+        },
+        "French Fries": {
+            "Potatoes": 30,
+            "Oil": 365,
+            "Salt": 365
+        },
+        "Baba Ganoush": {
+            "Eggplant": 7,
+            "Tahini": 30,
+            "Garlic": 30,
+            "Lemon Juice": 21,
+            "Olive Oil": 365,
+            "Salt": 365
+        },
+        "Falafel (3 pieces with hummus)": {
+            "Chickpeas": 60,
+            "Parsley": 5,
+            "Onions": 14,
+            "Garlic": 30,
+            "Spices": 60,
+            "Hummus": 7
+        },
+        "Grape Leaves (8 pieces)": {
+            "Grape Leaves": 7,
+            "Rice": 5,
+            "Onions": 14,
+            "Lemon Juice": 21,
+            "Olive Oil": 365,
+            "Spices": 60
+        },
+        "Side Salad": {
+            "Lettuce": 5,
+            "Tomato": 5,
+            "Cucumber": 7,
+            "Onions": 14,
+            "Bell Peppers": 7
+        },
+        "Side Rice": {
+            "Rice": 5,
+            "Water": 365,
+            "Salt": 365,
+            "Butter": 30
+        }
+    };
+
+    // Return the ingredients and shelf life for the specified dish name from the recipes dictionary.
+    return recipes[dishName];
+}
+
+// Fetching the dish name from the HTML input element with the ID 'dishInput'.
+var dishName = document.getElementById('dishInput').value;
+
+// Using the function to get ingredients and shelf life for the fetched dish name.
+var ingredientsAndShelfLife = getIngredientsAndShelfLife(dishName);
+
+// Initializing a variable to store the formatted text result.
+var formattedResult = "";
+
+// Iterating over the ingredients of the dish to format them.
+for (var ingredient in ingredientsAndShelfLife) {
+
+    // Appending each ingredient and its shelf life to the result string.
+    formattedResult += ingredient + ": " + ingredientsAndShelfLife[ingredient] + " days\n";
+}
+
+// Displaying the formatted result in an HTML element with the ID 'resultDisplay'.
+document.getElementById('resultDisplay').innerText = formattedResult;
